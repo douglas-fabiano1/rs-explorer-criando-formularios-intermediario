@@ -16,11 +16,100 @@
   --font-family-primary: "Poppins", var(--ff-main);
   --font-family-secondary: "Staatliches", var(--ff-main);
 
-  --font-color-button: #fff;
-  --font-color-legend: #535971;
-  --font-color-label: #4e4958;
+  --font-color-primary: #fff;
+  --font-color-secondary: #535971;
+  --font-color-tertiary: #4e4958;
   --font-color-span: #c1bccc;
   --font-color-input: var(--bg-color-button);
 
   --border-line-color: #e6e6f0;
+}
+
+body {
+  background: var(--bg-color-primary);
+  font-family: var(--font-family-primary);
+  font-size: 1.4rem;
+}
+
+h1,
+h3,
+legend,
+button {
+  font-family: var(--font-family-secondary);
+  font-weight: 400;
+}
+
+h1,
+p,
+button {
+  color: var(--font-color-primary);
+}
+
+body::before {
+  content: "";
+  background: var(--bg-color-secondary);
+  height: 436px;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.flex {
+  display: flex;
+}
+
+.page {
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 140px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+header h1 {
+  font-size: 48px;
+}
+
+header p {
+  font-size: 20px;
+  width: 417px;
+}
+
+form {
+  min-height: 500px;
+  padding: 64px;
+  margin-top: 58px;
+
+  border: var(--border-line-color);
+  border-radius: 20px 20px 0px 0px;
+  background: var(--bg-color-tertiary);
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label span {
+  color: var(--font-color-span);
+  font-size: 12px;
+  line-height: 20px;
 }
